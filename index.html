@@ -1009,8 +1009,8 @@
             <a href="https://www.facebook.com/share/1GXxmjQk9j/"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
-	       <script>
-	function zoomBox(element) {
+	       
+	 /*function zoomBox(element) {
     // Remove zoom class from all boxes
     document.querySelectorAll('.pricing-box').forEach(box => {
         box.classList.remove('zoom');
@@ -1023,7 +1023,22 @@
    /* setTimeout(() => {
         element.classList.remove('zoom');
     }, 500); */
+<script>
+		       function zoomBox(element) {
+    // Check if the clicked box is already zoomed
+    const isZoomed = element.classList.contains('zoom');
+
+    // Remove zoom class from all boxes
+    document.querySelectorAll('.pricing-box').forEach(box => {
+        box.classList.remove('zoom');
+    });
+
+    // Toggle zoom effect only if it was not already zoomed
+    if (!isZoomed) {
+        element.classList.add('zoom');
+    }
 }
+
 </script>
     <script>
         function toggleMenu() {
